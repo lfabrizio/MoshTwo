@@ -1,13 +1,15 @@
 package com.fabrizio;
 
+import java.awt.*;
+import java.util.Date;
+
 public class Main {
 
     public static void main(String[] args) {
-        byte age = 30;
-        long viewsCount = 3_123_456_789L;
-        float price = 10.99f;
-        char letter = 'A';
-        boolean isEligable = true;
+     // string literals
+        String message = "hello world";
+        message.endsWith("!!");
+        System.out.println(message);
 
     }
 }
