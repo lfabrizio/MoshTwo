@@ -7,9 +7,11 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
-            int x = 1;
-            x += 2;
-        System.out.println(x);
+            // Implicit casting
+        // byte -> short -> int -> long -> float -> double
+        String x = "1";
+        int y = Integer.parseInt(x) + 2;
+        System.out.println(y);
 
 
     }
