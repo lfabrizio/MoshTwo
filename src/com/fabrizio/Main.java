@@ -9,15 +9,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        // if statements
-        int temp = 32;
-        if (temp > 30) {
-            System.out.println("Hot day");
-            System.out.println("drink water");
-        } else if (temp > 20 && temp <= 30) {
-            System.out.println("Nice day");
-        } else {
-            System.out.println("too cold");
-        }
+        // simplify if statement
+        int income = 120_000;
+        boolean hasHighIncome = (income > 100_000);
     }
 }
