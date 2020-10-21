@@ -9,8 +9,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        // simplify if statement
-        int income = 120_000;
-        boolean hasHighIncome = (income > 100_000);
+        // switch statements
+        String role = "admin";
+        switch(role){
+            case "admin":
+                System.out.println("you're an admin");
+                break;
+            case "moderator":
+                System.out.println("you're a moderator");
+                break;
+            default:
+                System.out.println("You're a guest");
+            }
     }
-}
