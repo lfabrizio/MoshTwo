@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         // switch statements
         String role = "admin";
-        switch(role){
+        switch (role) {
             case "admin":
                 System.out.println("you're an admin");
                 break;
@@ -20,5 +20,6 @@ public class Main {
                 break;
             default:
                 System.out.println("You're a guest");
-            }
+        }
     }
+}
