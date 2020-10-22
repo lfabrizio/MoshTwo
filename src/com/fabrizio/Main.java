@@ -10,11 +10,13 @@ public class Main {
 
     public static void main(String[] args) {
         // while loop
-        
-        int i = 0;
-        while (i > 0){
-            System.out.println("Hello");
-            i--;
+
+        String input = "";
+        Scanner scanner = new Scanner(System.in);
+        while (!input.equals("quit")){
+            System.out.println("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
         }
         }
     }
