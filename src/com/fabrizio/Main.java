@@ -9,15 +9,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        // Do While Loop
-        String input = "";
-        Scanner scanner = new Scanner(System.in);
-        do {
-            System.out.println("Input: ");
-            input = scanner.next().toLowerCase();
-            System.out.println(input);
-        } while(!input.equals("quit"));
-        
+        // for each
+        String[] fruits = {"Apple", "Mango", "Orange", };
+        for(int i = 0; i < fruits.length;i++){
+            System.out.println(fruits[i]);
+
+            for(String fruit : fruits)
+                System.out.println(fruit);
         }
+
     }
 
