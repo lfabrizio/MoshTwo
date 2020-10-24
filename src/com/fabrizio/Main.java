@@ -10,13 +10,13 @@ public class Main {
 
     public static void main(String[] args) {
         // for each
-        String[] fruits = {"Apple", "Mango", "Orange", };
-        for(int i = 0; i < fruits.length;i++){
+        String[] fruits = {"Apple", "Mango", "Orange",};
+        for (int i = 0; i < fruits.length; i++) {
             System.out.println(fruits[i]);
 
-            for(String fruit : fruits)
+            for (String fruit : fruits)
                 System.out.println(fruit);
         }
-
     }
+}
 
