@@ -9,14 +9,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        // for each
-        String[] fruits = {"Apple", "Mango", "Orange",};
-        for (int i = 0; i < fruits.length; i++) {
-            System.out.println(fruits[i]);
+    greet("Lou");
 
-            for (String fruit : fruits)
-                System.out.println(fruit);
-        }
+    }
+    public static void greet(String name){
+        System.out.println("hello " + name);
     }
 }
 
