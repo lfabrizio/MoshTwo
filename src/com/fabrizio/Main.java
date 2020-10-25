@@ -9,11 +9,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-    greet("Lou");
+    greet("Lou", "f");
 
     }
-    public static void greet(String name){
-        System.out.println("hello " + name);
+    public static void greet(String first, String last){
+        System.out.println("hello " + first + " " + last);
     }
 }
 
