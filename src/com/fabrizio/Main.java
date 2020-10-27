@@ -9,11 +9,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-    greet("Lou", "f");
+    Textbox textBox1 = new Textbox(); //new instance of the textbox class
+        textBox1.setText("sample text");
+        System.out.println(textBox1.text.toUpperCase());
 
-    }
-    public static void greet(String first, String last){
-        System.out.println("hello " + first + " " + last);
+        var textBox2 = new Textbox();
+        textBox2.setText("Box 2");
+        System.out.println();
     }
 }
 
