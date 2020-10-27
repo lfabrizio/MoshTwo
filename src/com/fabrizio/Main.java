@@ -9,13 +9,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-    Textbox textBox1 = new Textbox(); //new instance of the textbox class
-        textBox1.setText("sample text");
-        System.out.println(textBox1.text.toUpperCase());
+    int baseSalary = 50_000;
+    int extraHours = 10;
+    int hourlyRate = 20;
+    int wage = calculateWage(baseSalary, extraHours, hourlyRate);
+        System.out.println(wage);
 
-        var textBox2 = new Textbox();
-        textBox2.setText("Box 2");
-        System.out.println();
+    }
+
+    public static int calculateWage( int baseSalary, int extraHours, int hourlyRate){
+       return baseSalary + (extraHours * hourlyRate);
     }
 }
 
