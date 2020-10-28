@@ -14,8 +14,8 @@ public class Main {
         employee.setHourlyRate(50_000);
         employee.setBaseSalary(20);
        int wage = employee.calculateWage(10);
-
         System.out.println(wage);
+
 
     }
 
