@@ -9,6 +9,11 @@ public class Employee {
     setHourlyRate(hourlyRate);
     }
 
+    public Employee(int baseSalary){
+        setBaseSalary(baseSalary);
+
+    }
+
     public int calculateWage(int extraHours){
 
         return baseSalary + (hourlyRate * extraHours);
@@ -32,7 +37,9 @@ public class Employee {
         return hourlyRate;
     }
 
-    public void setHourlyRate(int hourlyRate) {
-        this.hourlyRate = hourlyRate;
+    public void setHourlyRate(int hourlyRate){
+        if(hourlyRate < 0)
+            throw new IllegalArgumentException("hourly rate cannot");
+    this.hourlyRate = hourlyRate;
     }
 }
