@@ -4,35 +4,61 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 
-    public class Mortgage {
+public class Mortgage {
+    private final static byte MONTHS_PER_YEAR = 12;
+    private final static byte PERCENT = 100;
 
-       public static void main(String[] args) {
+    //encapsulate instance fields
+    // the data that we store here represent the state of our calculator object
+    private int principal;
+    private float annualInterest;
+    private byte years;
 
-           final byte MONTHS_IN_YEAR = 12;
-           final byte PERCENT = 100;
+    public Mortgage(int principal, float annualInterest, byte years) {
+        // initialize private fields
+        this.principal = principal;
+        this.annualInterest = annualInterest;
+        this.years = years;
+    }
 
-           Scanner scanner = new Scanner(System.in);
+    public double calculateBalance(short numberOfPaymentsMade) {
 
-           System.out.print("Principal:");
-           int principal = scanner.nextInt();
+        float monthlyInterest = getMonthlyInterest();
+        short numberOfPayments = (short)(getNumberOfPayments());
 
-           System.out.print("Annual Interest Rate: ");
-           float annualInterest = scanner.nextFloat();
-           float monthlyInterest = annualInterest / PERCENT /MONTHS_IN_YEAR;
+        double balance = principal
+                * (Math.pow(1 + monthlyInterest, numberOfPayments) - Math.pow(1 + monthlyInterest, numberOfPaymentsMade))
+                / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1);
 
-           System.out.print("Period (Years): ");
-           byte years = scanner.nextByte();
-           int numberOfPayments = years * MONTHS_IN_YEAR;
-
-           double mortgage = principal * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments)
-                   / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1));
-
-           String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
-           System.out.print("Mortgage: " + mortgageFormatted);
-
-
-       }
-
+        return balance;
     }
 
 
+    public double calculateMortgage() {
+
+        float monthlyInterest = getMonthlyInterest();
+        short numberOfPayments = (short) getNumberOfPayments();
+
+        double mortgage = principal
+                * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments))
+                / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1 );
+
+        return mortgage;
+    }
+
+    public double[] getRemainingBalances() {
+        var balances = new double[getNumberOfPayments()];
+        for (short month = 1; month <= balances.length; month++)
+            balances[month - 1] = calculateBalance(month);
+        return balances;
+    }
+
+    // these two methods are private bc of implementation detail
+    private float getMonthlyInterest() {
+        return annualInterest / PERCENT / MONTHS_PER_YEAR;
+    }
+
+    private int getNumberOfPayments() {
+        return years * MONTHS_PER_YEAR;
+    }
+}
