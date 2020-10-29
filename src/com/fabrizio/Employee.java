@@ -8,8 +8,14 @@ public class Employee {
     setBaseSalary(baseSalary);
     setHourlyRate(hourlyRate);
     }
+
     public int calculateWage(int extraHours){
+
         return baseSalary + (hourlyRate * extraHours);
+    }
+    public int calculateWage(){
+
+        return baseSalary;
     }
 
     private void setBaseSalary(int baseSalary){
