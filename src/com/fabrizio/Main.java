@@ -1,5 +1,7 @@
 package com.fabrizio;
 
+import com.fabrizio.mortgagecalc.UIControl;
+
 import java.awt.*;
 import java.text.NumberFormat;
 import java.util.Arrays;
@@ -9,10 +11,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-       var employee = new Employee(50_000, 20);
-       Employee.printNumberOfEmployees();
-       int wage = employee.calculateWage(10);
-        System.out.println(wage);
+    var control = new TextBox();
+    control.disable();
+        System.out.println(control.isEnabled());
 
 
 
