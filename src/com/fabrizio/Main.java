@@ -11,11 +11,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+    var control = new UIControl(true);
     var textBox = new Textbox();
-    textBox.setText("Hello there");
-        System.out.println(textBox);
+    show(textBox);
+    }
 
-
+    public static void show(UIControl control){
+        System.out.println(control);
     }
 
 }
