@@ -12,6 +12,8 @@ public class Main {
 
     public static void main(String[] args) {
     var textBox = new Textbox();
+    textBox.setText("Hello there");
+        System.out.println(textBox);
 
 
     }
