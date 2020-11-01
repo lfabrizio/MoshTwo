@@ -11,14 +11,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-    var control = new UIControl(true);
-    var textBox = new Textbox();
-    show(textBox);
-    }
 
-    public static void show(UIControl control){
-        System.out.println(control);
-    }
-
-}
+    var point1 = new Point(1, 2);
+        var point2 = new Point(1, 2);
+        System.out.println(point1.hashCode());
+        System.out.println(point2.hashCode());
+}}
 
