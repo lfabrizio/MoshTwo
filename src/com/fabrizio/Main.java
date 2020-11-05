@@ -13,5 +13,6 @@ public class Main {
     public static void main(String[] args) {
     //interfaces
         // what is tightly coupled code
+        //only method declarations
 }}
 
