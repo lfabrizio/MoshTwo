@@ -12,6 +12,6 @@ public class Main {
 
     public static void main(String[] args) {
     //interfaces
-        // loosely coupled
+        // what is tightly coupled code
 }}
 
